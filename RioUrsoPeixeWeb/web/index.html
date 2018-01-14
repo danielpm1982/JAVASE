@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Simulação Rio, Urso e Peixe Web</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color: black;
+                color: blanchedalmond;
+                text-align: center;
+                font-size: 3em;
+                margin-bottom: 2em;
+            }
+            input[type="submit"]{
+                font-size: 0.4em;
+                font-weight: 800;
+                width: 15em;
+                height: 2.5em;
+                text-align: center;
+                background-color: blanchedalmond;
+                display: block;
+                margin: auto;
+            }
+            input[type="number"], input[type="text"]{
+                font-size: 0.4em;
+                font-weight: 600;
+                width: 15em;
+                height: 2.5em;
+                text-align: center;
+                background-color: white;
+                margin: auto;
+                margin-bottom: 1.5em;
+            }
+            div#form{
+                width: 60%;
+                margin: auto;
+                padding: 0em 0.5em 0em 0.5em;
+            }
+            form{
+                margin-top: 1em;
+                margin-bottom: 1.0em;
+                border: solid 0.05em blueviolet;
+                border-radius: 0.5em;
+                padding: 0.3em 0.4em 0.6em 0.4em;
+            }
+            img#image1{
+                width: 10%;
+                position: fixed;
+                left: 2%;
+                bottom: 27%;
+            }
+            img#image2{
+                width: 10%;
+                position: fixed;
+                right: 2%;
+                bottom: 5.45%;
+            }
+            img#image3{
+                width: 10%;
+                position: fixed;
+                left: 2%;
+                bottom: 4%;
+            }
+            footer{
+                font-size: 0.5em;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div><h2>Simulação Rio, Urso e Peixe Web:</h2></div>
+        <img id="image1" src="images/java.png" alt="javaImage">
+        <img id="image2" src="images/uni7.jpg" alt="uni7Image">
+        <img id="image3" src="images/duke.png" alt="dukeImage">
+        <div id="form">
+            <form method="get" action="mostrarSaidaRioArray.do">
+                <input type="number" name="rioSize" id="rioSize" placeholder="insira tamanho do rio" title="número de elementos do array (min: 1 max: 10000)" min="1" max="10000" required>
+                <input type="text" name="propNotNull" id="propNotNull" placeholder="insira proporção not null" title="([0]+(.\d{1,2})?)|([1]{1}) (ex. 0.4 = 40%) (min: 0 max: 1)" pattern="([0]+(.\d{1,2})?)|([1]{1})" required>
+                <input type="submit" value="MostrarRio" id="inputSubmit">
+            </form>
+        </div>
+        <footer>
+            Daniel Pinheiro Maia<br>
+            Todos os direitos reservados ®<br>
+            Pós-Graduação em Arquitetura de Sistemas para Internet
+        </footer>
+        <script>
+            window.onload = function(){
+                var rioSize = document.getElementById("rioSize");
+                var propNotNull = document.getElementById("propNotNull");
+                var inputSubmit = document.getElementById("inputSubmit");
+        
+                var onMouseOverFunction = function(){
+                    this.style.backgroundColor="lightYellow";
+                    this.style.fontSize="0.5em";
+                    this.style.borderWidth="0.2em";
+                    this.style.borderStyle="double";
+                    this.style.borderColor="brown";
+                };
+                var onMouseOutFunction = function(){
+                    this.style.backgroundColor="white";
+                    this.style.fontSize="";
+                    this.style.borderWidth="";
+                    this.style.borderStyle="";
+                };
+                
+                rioSize.onmouseover = onMouseOverFunction;
+                rioSize.onmouseout = onMouseOutFunction;
+                propNotNull.onmouseover = onMouseOverFunction;
+                propNotNull.onmouseout = onMouseOutFunction;
+                
+                inputSubmit.onmouseover = function(){
+                    this.style.fontSize="0.5em";
+                    this.style.borderWidth="0.2em";
+                    this.style.borderStyle="double";
+                    this.style.borderColor="brown";
+                };
+                inputSubmit.onmouseout = function(){
+                    this.style.fontSize="";
+                    this.style.borderWidth="";
+                    this.style.backgroundColor="";
+                    this.blur();
+                };
+            }();
+        </script>
+    </body>
+</html>

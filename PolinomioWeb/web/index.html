@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Polinômio Web</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color: black;
+                color: blanchedalmond;
+                text-align: center;
+                font-size: 3em;
+                margin-bottom: 2em;
+            }
+            input[type="number"]{
+                line-height: 3;
+                width: 3em;
+                font-size: 0.5em;
+                text-align: right;
+                font-weight: 800;
+                color: blue;
+            }
+            h3.termo{
+                display: inline;
+                position: relative;
+                top: 0.15em;
+                color: chartreuse;
+            }
+            h6.expoente{
+                display: inline;
+                position: relative;
+                top: -0.6em;
+                color: aqua;
+            }
+            input[type="submit"]{
+                font-size: 0.5em;
+                font-weight: 800;
+                width: 5em;
+                height: 1.7em;
+                text-align: center;
+                background-color: blanchedalmond;
+                display: block;
+                margin: auto;
+                margin-top: 2em;
+            }
+            div#form{
+                width: 60%;
+                margin: auto;
+                padding: 0em 0.5em 0em 0.5em;
+            }
+            form{
+                margin-top: 1em;
+                margin-bottom: 1em;
+                border: solid 0.05em blueviolet;
+                border-radius: 0.5em;
+                padding: 0.4em 0.4em 0.4em 0.4em;
+            }
+            img#image1{
+                width: 10%;
+                position: fixed;
+                left: 2%;
+                bottom: 27%;
+            }
+            img#image2{
+                width: 10%;
+                position: fixed;
+                right: 2%;
+                bottom: 5.45%;
+            }
+            img#image3{
+                width: 10%;
+                position: fixed;
+                left: 2%;
+                bottom: 4%;
+            }
+            footer{
+                font-size: 0.5em;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div><h2>Preencha os campos do polinômio:</h2></div>
+        <img id="image1" src="images/java.png" alt="javaImage">
+        <img id="image2" src="images/uni7.jpg" alt="uni7Image">
+        <img id="image3" src="images/duke.png" alt="dukeImage">
+        <div id="form">
+            <form method="get" action="derivarPolinomio.do">
+                <input type="number" name="coeficiente1" required>
+                <h3 class="termo">x</h3><h6 class="expoente">4</h6><h3 class="termo"> + </h3>
+                <input type="number" name="coeficiente2" required>
+                <h3 class="termo">x</h3><h6 class="expoente">3</h6><h3 class="termo"> + </h3>
+                <input type="number" name="coeficiente3" required>
+                <h3 class="termo">x</h3><h6 class="expoente">2</h6><h3 class="termo"> + </h3>
+                <input type="number" name="coeficiente4" required>
+                <h3 class="termo">x</h3><h6 class="expoente">1</h6><h3 class="termo"> + </h3>
+                <input type="number" name="coeficiente5" required>
+                <input type="submit" value="Derivar">
+            </form>
+            <form method="get" action="derivarPolinomio.do">
+                <input type="number" name="coeficiente1" required>
+                <h3 class="termo">x</h3><h6 class="expoente">3</h6><h3 class="termo"> + </h3>
+                <input type="number" name="coeficiente2" required>
+                <h3 class="termo">x</h3><h6 class="expoente">2</h6><h3 class="termo"> + </h3>
+                <input type="number" name="coeficiente3" required>
+                <h3 class="termo">x</h3><h6 class="expoente">1</h6><h3 class="termo"> + </h3>
+                <input type="number" name="coeficiente4" required>
+                <input type="submit" value="Derivar">
+            </form>
+            <form method="get" action="derivarPolinomio.do">
+                <input type="number" name="coeficiente1" required>
+                <h3 class="termo">x</h3><h6 class="expoente">2</h6><h3 class="termo"> + </h3>
+                <input type="number" name="coeficiente2" required>
+                <h3 class="termo">x</h3><h6 class="expoente">1</h6><h3 class="termo"> + </h3>
+                <input type="number" name="coeficiente3" required>
+                <input type="submit" value="Derivar">
+            </form>
+            <form method="get" action="derivarPolinomio.do">
+                <input type="number" name="coeficiente1" required>
+                <h3 class="termo">x</h3><h6 class="expoente">1</h6><h3 class="termo"> + </h3>
+                <input type="number" name="coeficiente2" required>
+                <input type="submit" value="Derivar">
+            </form>
+            <form method="get" action="derivarPolinomio.do">
+                <input type="number" name="coeficiente1" required>
+                <input type="submit" value="Derivar">
+            </form>
+        </div>
+        <footer>
+            Daniel Pinheiro Maia<br>
+            Todos os direitos reservados ®<br>
+            Pós-Graduação em Arquitetura de Sistemas para Internet
+        </footer>
+        <script></script>
+    </body>
+</html>

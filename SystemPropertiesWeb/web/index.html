@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color: bisque;
+                color: white;
+                text-align: center;
+            }
+            div#one{
+                background-color: black;
+                font-size: 5em;
+                margin: 2em 5em 2em 5em;
+                border: solid white 0.1em;
+                padding: 0.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="one">Click for getting System.properties</div>
+        <script>
+            document.getElementById("one").onclick = function(){
+                location.href="serv.do";
+            };
+            document.getElementById("one").onmouseenter = function(){
+                document.getElementById("one").style.backgroundColor="blue";
+                document.getElementById("one").style.color="lightgreen";
+            };
+            document.getElementById("one").onmouseout = function(){
+                document.getElementById("one").style.backgroundColor="";
+                document.getElementById("one").style.color="";
+            };
+        </script>
+    </body>
+</html>
